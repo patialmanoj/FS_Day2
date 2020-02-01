@@ -1,5 +1,8 @@
 const jsDiv = document.getElementById("dateJs");
 const rectDiv = document.getElementById("dateReactJs");
+const rectDivWithJsx = document.getElementById("dateReactWithJsx");
+
+
 
 const render = () =>{
     jsDiv.innerHTML = `
@@ -21,8 +24,15 @@ const render = () =>{
             new Date().toString()
         )
     );
-    ReactDOM.render(divToRender,rectDiv);
 
+    var divToRenderWithJSX = <div className="split">
+                            React Template With Jsx 
+                            <input/>
+                            <p>{new Date().toString()}</p>
+                        </div>
+
+    ReactDOM.render(divToRender,rectDiv);
+    ReactDOM.render(divToRenderWithJSX,rectDivWithJsx);
 }
 
 setInterval(render ,1000);
