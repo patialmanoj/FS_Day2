@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,17 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.logo { height: 150px;}
+.subtitles{ font-style: italic; font-size: x-large;color: coral;}
+.feturedHouse{
+  border-radius: 2px;
+  background-color: rgb(255,190,166)
 }
+.header {
+  border: 1px solid black;
+  box-shadow: 5px 10px #c1c1c1;
+  margin-bottom: 36px;
+}
+
