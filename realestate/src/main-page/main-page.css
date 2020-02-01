@@ -48,4 +48,15 @@
   box-shadow: 5px 10px #c1c1c1;
   margin-bottom: 36px;
 }
+.header span {
+  height: 31px;
+  /* border: 1px solid; */
+  position: absolute;
+  top: 121px;
+  left: 67px;
+  padding-top: 4px;
+  color: #f79a3b;
+  font-weight: bold;
+  font-family: unset;
+}
 

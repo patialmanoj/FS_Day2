@@ -3,13 +3,18 @@ import "./main-page.css";
 import Header from "./components/header";
 import FeaturedHouse from './featured-house';
 import HouseFilter from './house-filter';
+import SearchResults from './search-results';
+import HouseDetail from './house';
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       featuredHouse: null, 
-      countries : []
+      countries : [],
+      activeHouse: null,
+      filteredHouses: null,
     };
     this.allHouses= null;
   }
@@ -41,15 +46,38 @@ class App extends React.Component {
     countries.unshift(null);
     this.setState({countries});
   }
+  filterHouses =(country) =>{
+    //--2
+    this.setState({activeHouse:null}); 
+    const filteredHouses = this.allHouses.filter(h=> h.country === country);
+     this.setState({filteredHouses});
+     this.setState({country}); 
+  }
+
+  setActiveHouse =(house)=>{
+    this.setState({activeHouse:house})
+  }
 
   render() {
+    let activeComponent = null;
+    if (this.state.country)
+        activeComponent = <SearchResults country={this.state.country} filteredHouses={this.state.filteredHouses} setActiveHouse={this.setActiveHouse} />;
+    if (this.state.activeHouse)
+        activeComponent = <HouseDetail house={this.state.activeHouse} />;
+    if (!activeComponent)
+        activeComponent = <FeaturedHouse house={this.state.featuredHouse} />;
+
     return (
       <div className="container">
         <Header subtitle="Help in Search Your Aashiyana around the World."/>
-        <HouseFilter countries={this.state.countries}/>
-        <FeaturedHouse house={this.state.featuredHouse}
+        <HouseFilter 
           countries={this.state.countries}
+          filterHouses= {this.filterHouses}
         />
+        {/* <FeaturedHouse 
+          house={this.state.featuredHouse}
+        /> */}
+        {activeComponent}
       </div>
     );
   }
