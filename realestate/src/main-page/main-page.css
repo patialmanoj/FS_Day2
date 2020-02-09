@@ -60,3 +60,9 @@
   font-family: unset;
 }
 
+.nav_container{
+  width: 400px;
+  background: #efe9e9;
+}
+.nav_inner { list-style: none;}
+.nav_inner li{}

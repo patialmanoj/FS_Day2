@@ -1,13 +1,12 @@
 import React from "react";
 import "./main-page.css";
-import Header from "./components/header";
 import FeaturedHouse from './featured-house';
 import HouseFilter from './house-filter';
 import SearchResults from './search-results';
 import HouseDetail from './house';
 
 
-class App extends React.Component {
+class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -68,8 +67,7 @@ class App extends React.Component {
         activeComponent = <FeaturedHouse house={this.state.featuredHouse} />;
 
     return (
-      <div className="container">
-        <Header subtitle="Help in Search Your Aashiyana around the World."/>
+      <div >
         <HouseFilter 
           countries={this.state.countries}
           filterHouses= {this.filterHouses}
@@ -83,7 +81,7 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default HomePage;
 // function App() {
 //   return (
 // <div className="container">

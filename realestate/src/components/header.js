@@ -1,5 +1,9 @@
 import React from "react";
-import logo from "../logo1.svg";
+import logo from "./logo1.svg";
+import Navigation from "../navigation";
+
+
+
 
 const Header = (props) => (
   <header className="row header">
@@ -10,6 +14,7 @@ const Header = (props) => (
     <div className="col-md-8 mt-5 subtitles">
         {props.subtitle} 
     </div>
+    <Navigation/>
   </header>
 );
 export default Header;
