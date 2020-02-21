@@ -16,3 +16,6 @@ Creating a basic react application, containing
     -- refresh the browser , you will get the flow
 -- Add Bootstrap --> npm install bootstrap@4
 
+-- React Router  npm install react-router-dom
+ 
+

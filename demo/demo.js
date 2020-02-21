@@ -4,7 +4,7 @@ const rectDivWithJsx = document.getElementById("dateReactWithJsx");
 
 
 
-const render = () =>{
+const render = () => {
     jsDiv.innerHTML = `
         <div class="split">
             Js Template 

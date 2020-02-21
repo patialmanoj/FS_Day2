@@ -4,18 +4,19 @@ import {NavLink} from 'react-router-dom';
 export default function(){
     return(
           <div class="nav_container">
-                <ul class="nav_inner">
-                    <li>
+                <div class="nav_inner">
+                    <div class="nav_ele">
                         <NavLink exact to="/">
                             Home
                         </NavLink>
-                    </li>
-                    <li>
+                    </div>
+                    |
+                    <div  class="nav_ele">  
                         <NavLink to="/aboutus">
                             About Us
                         </NavLink>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>    
          )
 }

@@ -38,5 +38,13 @@
         "description": "This luxurious three bedroom flat is contemporary in style and benefits from the use of a gymnasium and a reserved underground parking space.",
         "price": 400500,
         "photo": "164558"
+    },
+    {
+        "id": 6,
+        "address": "Opium Bridge 32, Utrecht",
+        "country": "India",
+        "description": "This luxurious three bedroom flat is contemporary in style and benefits from the use of a gymnasium and a reserved underground parking space.",
+        "price": 422500,
+        "photo": "534180"
     }
 ]

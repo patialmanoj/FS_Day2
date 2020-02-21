@@ -21,7 +21,8 @@ class HomePage extends React.Component {
   componentDidMount() {
     this.fetchHouses();
   }
-
+  //http://localhost:3000/houses/list
+  ///houses.json
   fetchHouses = () => {
     fetch("/houses.json")
       .then(rsp => rsp.json())
